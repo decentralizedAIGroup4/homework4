@@ -10,7 +10,7 @@ To consolidate this week's learning, complete the following project:
 * Users should upload a book or similar content with characters and settings
 * Implement a button to extract characters from the uploaded file
 * Develop a RAG pipeline to extract characters from the uploaded file [see 1:07:21 in lesson 16](https://www.youtube.com/watch?v=hU5FrT4woS8) , [rag-app](https://github.com/Encode-Club-AI-Bootcamp/DeAI/blob/main/Lesson-16/exercises/00-RAG-With-LlamaIndex.md)
-* Each character should have a name, description, and personality
+* Each character should have a name, description, and personality [compare to joke telling app](https://github.com/ArcTanSusan/tell-me-a-joke)
 * Add a text area below the button to display the results
 * Convert the output from the AI into an array of objects and present it in a table format
 - (optional) Use Structured Outputs to make it easier to process the textual responses in the pages
