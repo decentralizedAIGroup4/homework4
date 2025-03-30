@@ -5,7 +5,7 @@ To consolidate this week's learning, complete the following project:
 * Add all group members as collaborators
 * Create a README.md file with a comprehensive project description
 * Use the LlamaIndex TypeScript Toolset as a foundation or develop a new application from scratch using Next.js
-[Llama Index](https://www.llamaindex.ai/)
+[Llama Index](https://www.llamaindex.ai/),[Llama Index TS](https://github.com/run-llama/LlamaIndexTS)
 * Design a page with a single input field for .txt file uploads
 * Users should upload a book or similar content with characters and settings
 * Implement a button to extract characters from the uploaded file
