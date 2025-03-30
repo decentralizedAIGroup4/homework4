@@ -9,7 +9,7 @@ To consolidate this week's learning, complete the following project:
 * Design a page with a single input field for .txt file uploads
 * Users should upload a book or similar content with characters and settings
 * Implement a button to extract characters from the uploaded file
-* Develop a RAG pipeline to extract characters from the uploaded file
+* Develop a RAG pipeline to extract characters from the uploaded file [see 1:07:21 in lesson 16](https://www.youtube.com/watch?v=hU5FrT4woS8) , [rag-app](https://github.com/Encode-Club-AI-Bootcamp/DeAI/blob/main/Lesson-16/exercises/00-RAG-With-LlamaIndex.md)
 * Each character should have a name, description, and personality
 * Add a text area below the button to display the results
 * Convert the output from the AI into an array of objects and present it in a table format
