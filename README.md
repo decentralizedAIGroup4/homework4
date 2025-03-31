@@ -32,3 +32,6 @@ npm run dev
 ![rag-app-one](/screenshots/rag-app-one.png)
 ![rag-app-two](/screenshots/rag-app-two.png)
 ![rag-app-three](/screenshots/rag-app-three.png)
+![rag-app-four](/screenshots/rag-app-four.png)
+![rag-app-three](/screenshots/rag-app-five.png)
+![rag-app-three](/screenshots/rag-app-six.png)
