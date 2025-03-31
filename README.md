@@ -5,7 +5,7 @@ To consolidate this week's learning, complete the following project:
 * Add all group members as collaborators
 * Create a README.md file with a comprehensive project description
 * Use the LlamaIndex TypeScript Toolset as a foundation or develop a new application from scratch using Next.js
-[Llama Index](https://www.llamaindex.ai/)
+[Llama Index](https://www.llamaindex.ai/),[Llama Index TS](https://github.com/run-llama/LlamaIndexTS)
 * Design a page with a single input field for .txt file uploads
 * Users should upload a book or similar content with characters and settings
 * Implement a button to extract characters from the uploaded file
@@ -18,3 +18,15 @@ To consolidate this week's learning, complete the following project:
   see: [story telling app modification lession 12](https://github.com/Encode-Club-AI-Bootcamp/DeAI/blob/main/Lesson-12/exercises/04-Story-Telling.md)
   see: [story telling app description lesson 8](https://github.com/Encode-Club-AI-Bootcamp/DeAI/blob/main/Lesson-08/exercises/04-Story-Telling.md)
 * Submit your project through the designated submission form
+
+## To run
+
+npm install
+npm run dev
+
+## RAG APP
+
+![rag-app](/screenshots/rag-app.png)
+![rag-app-one](/screenshots/rag-app-one.png)
+![rag-app-two](/screenshots/rag-app-two.png)
+![rag-app-three](/screenshots/rag-app-three.png)
