@@ -19,18 +19,9 @@ To consolidate this week's learning, complete the following project:
   see: [story telling app description lesson 8](https://github.com/Encode-Club-AI-Bootcamp/DeAI/blob/main/Lesson-08/exercises/04-Story-Telling.md)
 * Submit your project through the designated submission form
 
-## Story Telling App
-
-![story telling](/screenshots/story-telling-app.png)
-
 ## RAG APP
 
 ![rag-app](/screenshots/rag-app.png)
 ![rag-app-one](/screenshots/rag-app-one.png)
 ![rag-app-two](/screenshots/rag-app-two.png)
 ![rag-app-three](/screenshots/rag-app-three.png)
-
-## Joke Telling App
-
-![tell-me-a-joke](screenshots/tell-me-a-joke.png)
-
