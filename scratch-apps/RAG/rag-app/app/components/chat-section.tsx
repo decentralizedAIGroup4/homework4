@@ -37,16 +37,17 @@ export default function ChatSection() {
       ...state,
       [name]: value,
     });
-    if (state.genre && state.tone) {
-      const prompt = `Generate a ${state.genre} story in a ${state.tone} tone.`;
-      handler.append({
-        role: "user",
-        content: prompt,
-      });
-    }
   };
 
-  const handler = useChat({
+  const editStory = () => {
+    const prompt = `Generate a ${state.genre} story in a ${state.tone} tone based on the initial uploaded source story.`;
+    RAGHandler.append({
+      role: "user",
+      content: prompt,
+    });
+  }
+
+  const RAGHandler = useChat({
     api: `${backend}/api/chat`,
     onError: (error: unknown) => {
       if (!(error instanceof Error)) throw error;
@@ -119,7 +120,13 @@ export default function ChatSection() {
             </div>
           </div>
         </div>
-        <ChatSectionUI handler={handler} className="w-full h-full">
+        <button
+              onClick={editStory}
+              className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+            >
+              Edit Story
+            </button>
+        <ChatSectionUI handler={RAGHandler} className="w-full h-full">
           <CustomChatMessages />
           <CustomChatInput />
         </ChatSectionUI>
