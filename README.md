@@ -19,6 +19,11 @@ To consolidate this week's learning, complete the following project:
   see: [story telling app description lesson 8](https://github.com/Encode-Club-AI-Bootcamp/DeAI/blob/main/Lesson-08/exercises/04-Story-Telling.md)
 * Submit your project through the designated submission form
 
+## To run
+
+npm install
+npm run dev
+
 ## RAG APP
 
 ![rag-app](/screenshots/rag-app.png)
