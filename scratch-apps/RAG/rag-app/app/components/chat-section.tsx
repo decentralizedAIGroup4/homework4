@@ -4,10 +4,10 @@ import { ChatSection as ChatSectionUI } from "@llamaindex/chat-ui";
 import "@llamaindex/chat-ui/styles/markdown.css";
 import "@llamaindex/chat-ui/styles/pdf.css";
 import { useChat } from "ai/react";
+import { useState } from "react";
 import CustomChatInput from "./ui/chat/chat-input";
 import CustomChatMessages from "./ui/chat/chat-messages";
 import { useClientConfig } from "./ui/chat/hooks/use-config";
-import { useState } from "react";
 
 export default function ChatSection() {
   const { backend } = useClientConfig();
@@ -26,8 +26,8 @@ export default function ChatSection() {
   ];
 
   const [state, setState] = useState({
-    genre: "fantasy",
-    tone: "happy",
+    genre: "",
+    tone: "",
   });
 
   const handleChange = ({
@@ -37,11 +37,17 @@ export default function ChatSection() {
       ...state,
       [name]: value,
     });
+    if (state.genre && state.tone) {
+      const prompt = `Generate a ${state.genre} story in a ${state.tone} tone.`;
+      handler.append({
+        role: "user",
+        content: prompt,
+      });
+    }
   };
 
   const handler = useChat({
     api: `${backend}/api/chat`,
-    initialInput: `Generate a ${state.genre} story based on the uploaded file in a ${state.tone} tone. `,
     onError: (error: unknown) => {
       if (!(error instanceof Error)) throw error;
       let errorMessage: string;
@@ -54,10 +60,8 @@ export default function ChatSection() {
     },
   });
   return (
-   
     <main className="mx-auto w-full p-24 flex flex-col">
       <div className="p4 m-4">
-
         <div className="flex flex-col items-center justify-center space-y-8 text-white">
           <div className="space-y-2">
             <h2 className="text-3xl font-bold">Story Telling App</h2>
@@ -80,7 +84,7 @@ export default function ChatSection() {
                     type="radio"
                     value={value}
                     name="genre"
-                    checked={state.genre === value} 
+                    checked={state.genre === value}
                     onChange={handleChange}
                   />
                   <label className="ml-2" htmlFor={value}>
@@ -104,7 +108,7 @@ export default function ChatSection() {
                     type="radio"
                     name="tone"
                     value={value}
-                    checked={state.tone === value} 
+                    checked={state.tone === value}
                     onChange={handleChange}
                   />
                   <label className="ml-2" htmlFor={value}>
@@ -115,11 +119,11 @@ export default function ChatSection() {
             </div>
           </div>
         </div>
-      <ChatSectionUI handler={handler} className="w-full h-full">
-      <CustomChatMessages />
-      <CustomChatInput />
-    </ChatSectionUI>
-    </div>
-  </main>
+        <ChatSectionUI handler={handler} className="w-full h-full">
+          <CustomChatMessages />
+          <CustomChatInput />
+        </ChatSectionUI>
+      </div>
+    </main>
   );
 }
