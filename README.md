@@ -21,8 +21,10 @@ To consolidate this week's learning, complete the following project:
 
 ## To run
 
+```
 npm install
 npm run dev
+```
 
 ## RAG APP
 
