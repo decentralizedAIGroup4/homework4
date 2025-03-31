@@ -54,7 +54,9 @@ export default function ChatSection() {
     },
   });
   return (
-    <ChatSectionUI handler={handler} className="w-full h-full">
+   
+    <main className="mx-auto w-full p-24 flex flex-col">
+      <div className="p4 m-4">
 
         <div className="flex flex-col items-center justify-center space-y-8 text-white">
           <div className="space-y-2">
@@ -113,8 +115,11 @@ export default function ChatSection() {
             </div>
           </div>
         </div>
+      <ChatSectionUI handler={handler} className="w-full h-full">
       <CustomChatMessages />
       <CustomChatInput />
     </ChatSectionUI>
+    </div>
+  </main>
   );
 }
